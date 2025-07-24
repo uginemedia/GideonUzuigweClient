@@ -201,16 +201,20 @@
   text-transform: uppercase;
 }
 
+.skill:nth-child(1) div::before {
+  width: 100%;
+}
+
 .skill:nth-child(2) div::before {
-  width: 90%;
+  width: 100%;
 }
 
 .skill:nth-child(3) div::before {
-  width: 88%;
+  width: 100%;
 }
 
 .skill:nth-child(4) div::before {
-  width: 77%;
+  width: 100%;
 }
 
 .skill:nth-child(5) div::before {

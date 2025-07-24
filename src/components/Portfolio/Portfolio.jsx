@@ -36,6 +36,8 @@ const Portfolio = () => {
         dataImage = url;
       })
 
+      console.log(portfolioData.data)
+
       return {data, dataImage};
     } catch (error) {
       console.error("Failed to fetch portfolio data:", error);
@@ -52,8 +54,9 @@ const Portfolio = () => {
   return (
     <div>
       <div className="container">
-        <div className="portfolios">
-          {portfolioData && portfolioData.data && portfolioData.data.map((item, index) => {
+        {portfolioData && portfolioData.data && portfolioData.data.length > 0 ? 
+          <div className="portfolios">
+          {portfolioData.data.map((item, index) => {
             // Generate image URL from preview_image
             let imageUrl = "";
             if (item.preview_image && item.preview_image.data && item.preview_image.contentType) {
@@ -72,10 +75,11 @@ const Portfolio = () => {
                   <p>{item.type}</p>
                 </div>
               </div>
-            );
+            )
           })}
-          {!portfolioData && !portfolioData.data && <div>Fetching Data...</div>}
         </div>
+        : <div className="loading">Loading Data...</div>
+        }
         {selectedItem && (
           <Popup item={selectedItem} closePortfolio={closePortfolio} />
         )}

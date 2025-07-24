@@ -88,7 +88,7 @@ const About = () => {
         <div className={`about-shapes ${theme}`}>
           <div>
             <h3>
-              1
+              3
               <sup>
                 <HiPlus />
               </sup>
@@ -130,25 +130,25 @@ const About = () => {
         <div className="skills">
           <div className={`skill ${theme}`}>
             <div>
-              <span>89%</span>
+              <span>100%</span>
             </div>
             <h4>HTML</h4>
           </div>
           <div className={`skill ${theme}`}>
             <div>
-              <span>90%</span>
+              <span>100%</span>
             </div>
             <h4>CSS</h4>
           </div>
           <div className={`skill ${theme}`}>
             <div>
-              <span>88%</span>
+              <span>100%</span>
             </div>
             <h4>JavaScript</h4>
           </div>
           <div className={`skill ${theme}`}>
             <div>
-              <span>77%</span>
+              <span>100%</span>
             </div>
             <h4>React</h4>
           </div>

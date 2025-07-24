@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  cursor: none;
+}
+
+:root {
+  --toastify-dark-color: #121212;
+  --bs-dark: #212529;
+  --bs-light: #f8f9fa;
+  --main-primary-color: #ffb400;
+  --toggle-bg-dark: #495057;
+  --toggle-bg-light: #e9ecef;
+  --toggle-text-light: #323232;
+  --anchor-bg-dark: #343a40;
+  --anchor-bg-light: #dee2e6;
+  --anchor-text-light: #495057;
+  --custom-dark: rgba(255, 255, 255, 0.6);
+  /* --bs-gray: #323232;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+  --bs-light: #f8f9fa;
+  --bs-danger: #dc3545;
+  --bs-warning: #ffc107;
+  --bs-info: #0dcaf0;
+  --bs-success: #198754;
+  --bs-secondary: #6c757d;
+  --bs-primary: #0d6efd; */
+
+  /* --main-primary-color: rgba(32, 178, 170, 0.8); */
+}
+
+body[dark-theme="light"] {
+  background-color: var(--bs-light);
+  color: var(--bs-dark);
+}
+
+body[data-theme="dark"] {
+  background-color: var(--toastify-dark-color);
+  color: var(--bs-light);
+}
+
+body {
+  cursor: none;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cursor {
+  display: block;
+  z-index: 999;
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 180, 0, 0.3);
+  opacity: 0;
+  transition: all 0.15s linear;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-2 {
+  display: block;
+  z-index: 999;
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(255, 180, 0);
+  transition: all 0.1s linear;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.btn {
+  width: 230px;
+  height: 55px;
+  border: 1px solid var(--main-primary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 50px;
+  color: var(--bs-light);
+  overflow: hidden;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 800;
+  background: transparent;
+  margin-top: 20px;
+}
+
+.btn span:nth-child(1) {
+  position: relative;
+  left: -20px;
+}
+
+.btn span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55px;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--main-primary-color);
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.btn .btn_icon {
+  position: absolute;
+  top: 50%;
+  left: 92%;
+  transform: translateY(-50%) translateX(-92%);
+  font-size: 18px;
+}
+
+.btn:hover span:nth-child(2) {
+  width: 100%;
+  border-radius: 0;
+}
+
+.btn.light:hover {
+  color: var(--bs-light);
+}
+
+.btn.light {
+  color: var(--anchor-text-light);
+}
+
+.btn.light .btn_icon {
+  color: var(--bs-light);
+}
+
+.btn.lg .btn_icon {
+  top: 55%;
+  font-size: 22px;
+}
+
+@media (max-width: 999px) {
+  .container {
+    width: 100%;
+    padding: 0 5%;
+  }
+}
